@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Crop Prices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Monthly Crop Prices</h1>
+</header>
+
+<div class="container">
+    <form id="crop-form">
+        <label for="crop-name">Crop Name:</label>
+        <input type="text" id="crop-name" required>
+
+        <label for="price">Price (per kilogram):</label>
+        <input type="number" id="price" required>
+
+        <label for="month">Month:</label>
+        <input type="month" id="month" required>
+
+        <button type="submit">Add Crop Data</button>
+    </form>
+
+    <table id="crop-table">
+        <thead>
+            <tr>
+                <th>Crop Name</th>
+                <th>Price (per kilogram)</th>
+                <th>Month</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="chart-container">
+        <canvas id="crop-chart"></canvas>
+    </div>
+
+    <div id="yearly-chart-container">
+        <canvas id="yearly-crop-chart"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
